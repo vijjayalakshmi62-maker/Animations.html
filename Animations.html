@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animations Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            animation: fadeIn 3s ease-in;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 50px auto;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* Transition effect */
+            transition: transform 0.5s;
+            
+            /* Slide animation */
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from { transform: translateX(-200px); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Animated Page</h1>
+
+    <div class="box">
+        Hover Me
+    </div>
+
+</body>
+</html>
+OUTPUT 
+--------------------------------------------------
+|                                                |
+|        Welcome to My Animated Page             |  <-- (Fade-in effect)
+|                                                |
+|                                                |
+|              [   Hover Me   ]                  |  <-- Blue box
+|                                                |
+|                                                |
+--------------------------------------------------
